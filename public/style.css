@@ -1,52 +1,106 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
-* {
-  box-sizing: border-box;
+*{
   margin: 0;
   padding: 0;
+  font-family: sans-serif ;
+  box-sizing: border-box;
 }
-
-body {
+.container{
+  width: 100%;
   min-height: 100vh;
-  display: grid;
-  place-items: center;
-  font-family: Helvetica, Arial, sans-serif;
-  background: silver;
+  background: linear-gradient(180deg, #ffffff, #ffeaea);
+  padding: 10px;
 }
-
-header {
-  padding: 0.5rem;
-  background: red;
-  color: white;
-
-  h1 {
-    text-transform: uppercase;
-  }
+.card{
+  width: 600px;
+  height: 400px;
+  margin: 100px auto 0;
+  perspective: 1000px;
 }
-
-article {
+.card-inner{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.front, .back{
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  position: absolute;
+ box-shadow: 0px 0px 7px 7px #969696;
+  backface-visibility: hidden;
+}
+.front{
+  background: url(/assets/cherrykaart.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 140px 100px;
   display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  width: 12rem;
-  aspect-ratio: 1/1;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  background: white;
+  flex-direction: column;
+  justify-content: flex-end;
   text-align: center;
-  transform-origin: center;
-  transform: rotate(2deg);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  > p {
-    font-size: 2rem;
-    font-family: 'Permanent Marker', cursive;
-    transform-origin: center;
-    transform: rotate(-6deg);
-    word-break: break-all;
-  }
+  box-shadow: 0px 0px 7px 7px #e4b0b0;
 }
-
-footer {
-  height: 1rem;
-  background: red;
+.front h2{
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+}
+.front p{
+  color: #000000;
+  font-size: 20px;
+}
+.front button{
+  width: 120px;
+  border: 1px solid #000000;
+  background: transparent;
+  border-radius: 50px;
+  padding: 20px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  margin-left: 120px
+}
+.back{
+  background: #fff;
+  background: linear-gradient(#e3dbf6 #ffc0cb);
+  color: #0c0c0c;
+  padding: 20px 40px;
+  transform: rotateY(180deg);
+  box-shadow: 0px 0px 7px 7px #969696;
+}
+.back h1{
+  font-size: 50px;
+  line-height: 55px;
+  margin-bottom: 10px;
+}
+.back h1 span{
+  font-weight: 400;
+}
+.back p{
+  font-size: 18px;
+  text-align: center;
+}
+.row{
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.col{
+  flex: 1;
+  text-align: center;
+  color: #000000;
+  font-size: 15px;
+  position: relative;
+}
+.col h2{
+  font-size: 27px;
+}
+.back img{
+  width: 270px;
+  height: 290px;
+  float: left;
+}
+.card:hover .card-inner{
+  transform: rotateY(180deg);
 }

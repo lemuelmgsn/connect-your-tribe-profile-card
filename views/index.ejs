@@ -1,14 +1,39 @@
 <%- include('./partials/head') %>
 
-<article>
-  <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
-  </header>
+<div class="container">
+<div class="card">
+  <div class="card-inner">
+    <div class="front">
+      <h2><%= data.name %> <%= data.surname %></h2>
+      <p>frontend design & development</p>
+      
+    </div>
+    <div class="back">
+      <h1> <%= data.name %> <span> <%= data.surname %> </span></h1>
+      <p>Opkomende webdeveloper</p>
+      <img src="assets/memoji2.2024.jpg">
+      <div class="row">
 
-  <p><%= data.name %></p>
+        <div class="col">
+          <h2>Spotify</h2>
+          <p>R&B</p>
 
-  <footer></footer>
-</article>
+        <div class="col">
+          <h2>Basketbal</h2>
+          <p>Eredivisie</p>
+
+        <div class="col">
+           <h2>FDND</h2>
+           <p>Hogeschool van Amsterdam</p>
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
 
 <%- include('./partials/foot') %>
+
+ 
