@@ -10,21 +10,20 @@
     </div>
     <div class="back">
       <h1> <%= data.name %> <span> <%= data.surname %> </span></h1>
-      <p>Opkomende webdeveloper</p>
+      <p> <%= data.bio %> </p>
       <img src="assets/memoji2.2024.jpg">
       <div class="row">
 
-        <div class="col">
-          <h2>Spotify</h2>
-          <p>R&B</p>
 
         <div class="col">
-          <h2>Basketbal</h2>
-          <p>Eredivisie</p>
+          <h2> <%= data.custom.age %> </h2>
 
         <div class="col">
-           <h2>FDND</h2>
-           <p>Hogeschool van Amsterdam</p>
+          <h2> <%= data.custom.school %> </h2>
+          <p>Hogeschool van Amsterdam</p>
+
+        <div class="col">
+           <h2> <%= data.custom.hobby %> </h2>
 
         </div>
         </div>
