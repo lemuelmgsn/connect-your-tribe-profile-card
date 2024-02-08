@@ -4,7 +4,7 @@
   font-family: sans-serif ;
   box-sizing: border-box;
 }
-.container{
+/* .container{
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(180deg, #ffffff, #ffeaea);
@@ -103,4 +103,86 @@
 }
 .card:hover .card-inner{
   transform: rotateY(180deg);
+} */
+html{
+  font-family:sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: grey;
+}
+.container .card{
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 350px;
+  height: 300px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+  transition: 0.5s;
+}
+.container .card:hover{
+  height: 400px;
+  width: 400px;
+}
+.container .card .imgbox{
+  top:20px;
+  overflow:hidden;
+  position: relative;
+  width: 300px;
+  height: 220px;
+  background: linear-gradient(cyan , violet 60%);
+  border-radius: 12px;
+  transition: 0.5s;
+}
+.container .card:hover .imgbox{
+  top: -80px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.2)
+}
+
+/* voor de image in het blokje */
+
+.container .card .imgbox img{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+  object-fit:cover;
+}
+.container .card .content{
+  position: absolute;
+  width: 100%;
+  padding: 0 30px;
+  overflow:hidden;
+  height: 55px;  
+  text-align: center;
+  top:238px;
+  transition: 0.5s;
+}
+h2{
+  margin-bottom: -10px;
+}
+.container .card:hover .content{
+  top: 100px;
+  height:300px;
+}
+.container .card .content h2{
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.test-div{
+  overflow:hidden;
+}
+
+/* ul content */
+ul{
+  list-style-type: none;
+  text-align:left;
 }

@@ -1,13 +1,13 @@
 <%- include('./partials/head') %>
 
-<div class="container">
+<!-- <div class="container">
 <div class="card">
   <div class="card-inner">
     <div class="front">
-      <h2><%= data.name %> <%= data.surname %></h2>
-      <p>frontend design & development</p>
+     <h2><%= data.name %> <%= data.surname %></h2>
+      <p>frontend design & development</p> -->
       
-    </div>
+    <!-- </div>
     <div class="back">
       <h1> <%= data.name %> <span> <%= data.surname %> </span></h1>
       <p> <%= data.bio %> </p>
@@ -31,6 +31,24 @@
     </div>
   </div>
  </div>
+</div> -->
+
+
+<div class = "container">
+  <div class = "card">
+    <div class = "imgbox"></div>
+    <div class = "content">
+      <h1><%= data.name %></h1>
+      <p> <%= data.bio %> </p>
+      <ul>
+        <li><%= data.custom.age %></li>
+        <li><%= data.custom.school %></li>
+        <li><%= data.custom.hobby %></li>
+        <li><%= data.email %></li>
+        <li> <a href="https://github.com/lemuelmgsn"> <%= data.github_handle %> </a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <%- include('./partials/foot') %>
