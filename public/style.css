@@ -185,4 +185,9 @@ h2{
 ul{
   list-style-type: none;
   text-align:left;
+  padding-top: 2em;
+}
+ul > li{
+  font-size: 1.3em;
+  padding: 3px;
 }
